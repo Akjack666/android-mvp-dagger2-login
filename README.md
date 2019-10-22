@@ -48,7 +48,7 @@ El presentador necesita recibir tanto el modelo como la vista
 ## LoginActivityModel
 
 Implementa la interfaz de modelo
--recibe en el constructor el repositorio
+- recibe en el constructor el repositorio
 
 # Repository
 
@@ -66,6 +66,10 @@ Tiene la clase static LoginModule
 
 
 Mediante @provides, hace que las interfaces , reciban como parametro otra interfaz, y devuelva una instancia de la clase (Rellenando el constructor con la dependecia que necesitaban)
--EL presentador el modelo
--El modelo el repositorio
+- EL presentador el modelo
+- El modelo el repositorio
 
+
+# Enlaces de interes
+
+http://codictados.com/mvp/
