@@ -6,6 +6,7 @@ import com.example.daggerlogin.login.repository.LoginRepository;
 public class LoginActivityModel implements LoginActivityMVP.Model {
 
     private LoginRepository repository;
+
     public LoginActivityModel(LoginRepository repository) {
         this.repository = repository;
     }

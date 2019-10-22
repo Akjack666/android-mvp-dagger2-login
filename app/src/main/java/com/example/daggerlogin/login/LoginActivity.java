@@ -13,7 +13,7 @@ import com.example.daggerlogin.root.App;
 
 import javax.inject.Inject;
 
-public class LoginActivity extends AppCompatActivity implements LoginActivityMVP.View{
+public class LoginActivity extends AppCompatActivity implements LoginActivityMVP.View {
 
     @Inject
     LoginActivityMVP.Presenter presenter;
@@ -60,18 +60,18 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityMVP
 
     @Override
     public void showUserNotAvailable() {
-        Toast.makeText(this,"El usuario no esta disponible",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "El usuario no esta disponible", Toast.LENGTH_LONG).show();
 
     }
 
     @Override
     public void showInputError() {
-        Toast.makeText(this,"Error, algun campo esta vacio",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Error, algun campo esta vacio", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void showUserSaved() {
-        Toast.makeText(this,"Usuario guardado correctamente",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Usuario guardado correctamente", Toast.LENGTH_LONG).show();
     }
 
     @Override

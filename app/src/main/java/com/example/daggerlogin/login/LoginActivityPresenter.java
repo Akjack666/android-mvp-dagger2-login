@@ -22,11 +22,11 @@ public class LoginActivityPresenter implements LoginActivityMVP.Presenter {
 
     @Override
     public void loginButtonClicked() {
-        if(view != null) {
-            if(view.getName().trim().equals("") || view.getLastName().trim().equals("")) {
+        if (view != null) {
+            if (view.getName().trim().equals("") || view.getLastName().trim().equals("")) {
                 view.showInputError();
-            }else {
-                model.createUser(view.getName().trim(),view.getLastName().trim());
+            } else {
+                model.createUser(view.getName().trim(), view.getLastName().trim());
                 view.showUserSaved();
             }
         }
@@ -35,12 +35,12 @@ public class LoginActivityPresenter implements LoginActivityMVP.Presenter {
     @Override
     public void getCurrentUser() {
         User user = model.getUser();
-        if(user == null) {
-            if(view != null) {
+        if (user == null) {
+            if (view != null) {
                 view.showUserNotAvailable();
             }
         } else {
-            if(view != null) {
+            if (view != null) {
                 view.setName(user.getName());
                 view.setLastName(user.getLastName());
             }

@@ -2,7 +2,7 @@ package com.example.daggerlogin.root;
 
 import android.app.Application;
 
-import com.example.daggerlogin.login.repository.MemoryRepository;
+import com.example.daggerlogin.login.LoginModule;
 
 
 public class App extends Application {
@@ -15,11 +15,11 @@ public class App extends Application {
 
         component = DaggerApplicationComponent.builder()
                 .aplicationModule(new AplicationModule(this))
-                .loginModule(new MemoryRepository.LoginModule())
+                .loginModule(new LoginModule())
                 .build();
     }
 
-    public ApplicationComponent getComponent () {
+    public ApplicationComponent getComponent() {
         return component;
     }
 }
