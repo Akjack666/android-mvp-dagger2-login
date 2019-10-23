@@ -9,14 +9,26 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.daggerlogin.R;
+import com.example.daggerlogin.http.TwitchAPI;
+import com.example.daggerlogin.http.twitch.Game;
+import com.example.daggerlogin.http.twitch.Twich;
 import com.example.daggerlogin.root.App;
 
+import java.util.List;
+
 import javax.inject.Inject;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity implements LoginActivityMVP.View {
 
     @Inject
     LoginActivityMVP.Presenter presenter;
+
+    @Inject
+    TwitchAPI twitchAPI;
 
     EditText etName, etLastName;
     Button btEnter;
@@ -38,6 +50,27 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityMVP
                 presenter.loginButtonClicked();
             }
         });
+
+
+        // Ejemplo del uso de la api de twitch
+
+        Call<Twich> call = twitchAPI.getTopGames("3l81upzqs0q86nlheh781w4jpcx5a1");
+        call.enqueue(new Callback<Twich>() {
+            @Override
+            public void onResponse(Call<Twich> call, Response<Twich> response) {
+                List<Game> topGames = response.body().getData();
+
+                for (Game game : topGames) {
+                    System.out.println(game.getName());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Twich> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
+
     }
 
     @Override
