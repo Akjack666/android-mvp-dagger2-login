@@ -1,5 +1,7 @@
 package com.example.daggerlogin.login;
 
+import android.content.Context;
+
 import com.example.daggerlogin.login.model.User;
 
 public interface LoginActivityMVP {
@@ -21,16 +23,17 @@ public interface LoginActivityMVP {
 
         void setLastName(String lastName);
 
+
+
     }
 
 
     interface Presenter {
         void setView(LoginActivityMVP.View view);
 
-        void loginButtonClicked();
+        void loginButtonClicked(Context context);
 
         void getCurrentUser();
-
 
     }
 
