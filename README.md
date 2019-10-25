@@ -73,3 +73,4 @@ Mediante @provides, hace que las interfaces , reciban como parametro otra interf
 # Enlaces de interes
 
 http://codictados.com/mvp/
+https://medium.com/mindorks/kotlin-mvp-dagger-2-retrofit-sample-android-application-e6fe3af7acd
