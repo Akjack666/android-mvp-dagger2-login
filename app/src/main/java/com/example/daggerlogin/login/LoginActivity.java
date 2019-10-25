@@ -2,6 +2,7 @@ package com.example.daggerlogin.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -47,7 +48,7 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityMVP
         btEnter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.loginButtonClicked();
+                presenter.loginButtonClicked(getApplicationContext());
             }
         });
 
@@ -117,4 +118,8 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityMVP
     public void setLastName(String lastName) {
         this.etLastName.setText(lastName);
     }
+
+
+
+
 }
