@@ -79,3 +79,5 @@ Mediante @provides, hace que las interfaces , reciban como parametro otra interf
 - Mocked Retrofit https://github.com/mirrajabi/okhttp-json-mock
 
 - Dagger + info https://medium.com/@harivigneshjayapalan/dagger-2-for-android-beginners-advanced-part-i-1e14fccf2cc8
+
+- example https://github.com/afjoseph/BareBonesAndroidDagger
