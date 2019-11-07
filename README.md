@@ -83,3 +83,5 @@ Mediante @provides, hace que las interfaces , reciban como parametro otra interf
 - example https://github.com/afjoseph/BareBonesAndroidDagger
 
 - https://www.raywenderlich.com/262-dependency-injection-in-android-with-dagger-2-and-kotlin
+
+- https://www.zoftino.com/dependency-injection-android-using-dagger2
